@@ -1,0 +1,45 @@
+﻿@model MVCApp.Models.Opravilo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Odstrani</h2>
+
+<h3>Res želite odstraniti to opravilo?</h3>
+<div>
+    <h4>Opravilo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Oseba)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Oseba)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Opis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Opis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumZakljucka)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DatumZakljucka)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Odstrani" class="btn btn-default" /> |
+        <a asp-action="Index">Nazaj na listo</a>
+    </form>
+</div>
